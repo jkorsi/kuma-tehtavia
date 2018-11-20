@@ -83,5 +83,9 @@ public class Charmander implements Pokemon {
         }
         return boo;
     }
+    @Override
+    public void accept(BonusVisitor visitor){
+        visitor.addBonusPoints(this);
+    }
 
 }

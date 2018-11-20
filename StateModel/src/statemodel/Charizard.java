@@ -66,5 +66,10 @@ public class Charizard implements Pokemon{
     public int getPoints(){
         return points;
     }
+    @Override
+    public void accept(BonusVisitor visitor){
+        visitor.addBonusPoints(this);
+    }
+    
     
 }

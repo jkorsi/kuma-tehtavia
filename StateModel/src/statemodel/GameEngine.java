@@ -37,5 +37,8 @@ public class GameEngine {
     public void jump() {
         pokemon.jump();
     }
+    public void accept(BonusVisitor visitor){
+        pokemon.accept(visitor);
+    }
 
 }

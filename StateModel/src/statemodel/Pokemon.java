@@ -15,7 +15,7 @@ public interface Pokemon {
     public void move();
     public void jump();
     public int getPoints();
-    
-    
     public void setEngine(GameEngine engine);
+    public void accept(BonusVisitor visitor);
+    
 }

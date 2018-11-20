@@ -17,16 +17,18 @@ public class StateModel {
     public static void main(String[] args) {
         
         GameEngine engine = new GameEngine();
+        BonusVisitor bonuser = new BonusVisitor();
         
-        
         System.out.println(engine.getPokemonState());
         engine.attack();
         engine.jump();
+        engine.accept(bonuser);
         System.out.println(engine.getPokemonState());
         engine.move();
         engine.attack();
         System.out.println(engine.getPokemonState());
         engine.attack();
+        engine.accept(bonuser);
         engine.move();
         engine.attack();
         engine.move();
@@ -34,6 +36,7 @@ public class StateModel {
         engine.attack();
         engine.jump();
         engine.jump();
+        engine.accept(bonuser);
         engine.jump();
         engine.attack();
         System.out.println(engine.getPokemonState());
